@@ -19,8 +19,6 @@ export default class Board extends PureComponent {
       .sort((p1,p2) => (p2.score - p1.score))
       .map((player, index) => (
         <Player key={index} onChange={updatePlayer} { ...player}  />))
-// render a bunch of player components
-// by spreading out the props obj to probs
 
   }
 
@@ -29,7 +27,7 @@ export default class Board extends PureComponent {
       <div>
         <Title content="Scoreboard" />
         <ul className="Board">
-          {this.renderPlayers()} 
+          {this.renderPlayers()}
 
         </ul>
       </div>

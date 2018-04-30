@@ -1,6 +1,7 @@
 import React, { PureComponent } from 'react'
 import './Player.css'
 import PropTypes from 'prop-types'
+import PlusOneButton from './PlusOneButton'
 
 export const playerShape = PropTypes.shape({
   id: PropTypes.number.isRequired,
@@ -26,6 +27,7 @@ export default class Player extends PureComponent {
       <li className="Player">
         <p className="name">{name}</p>
         <p className="score">{score}</p>
+        <PlusOneButton onClick={this.increasePlayerScore} />
         </li>
     )
   }
